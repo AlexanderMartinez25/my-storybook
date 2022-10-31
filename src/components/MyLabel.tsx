@@ -2,6 +2,10 @@ import "./myLabel.css";
 
 export interface MyLabelProps {
   /**
+   * Color personalizado del color de la fuente
+   */
+  fontColor?: string;
+  /**
    * Este es el mensaje a mostrar en la etiqueta
    */
   label: string;
@@ -24,9 +28,13 @@ export const MyLabel = ({
   color = "primary",
   label = "No Label",
   size = "normal",
+  fontColor,
 }: MyLabelProps) => {
   return (
-    <span className={`${size} text-${color}`}>
+    <span
+      className={`label ${size} text-${color}`}
+      style={{ color: fontColor }}
+    >
       {allCaps ? label.toUpperCase() : label}
     </span>
   );

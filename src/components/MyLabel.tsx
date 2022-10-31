@@ -1,4 +1,4 @@
-import "./myLabel.css";
+import "./mylabel.css";
 
 export interface MyLabelProps {
   /**

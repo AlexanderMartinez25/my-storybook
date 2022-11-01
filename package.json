@@ -55,9 +55,18 @@
     "chromatic": "^6.11.3",
     "copyfiles": "^2.4.1",
     "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.5",
     "typescript": "^4.6.4",
     "vite": "^3.2.0"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "my-storybook@0.0.0"
+  "_id": "my-storybook@0.0.0",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
 }

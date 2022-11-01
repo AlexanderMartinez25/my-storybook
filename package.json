@@ -11,6 +11,10 @@
     "url": "https://alexandermartinez25.github.io/my-storybook/",
     "type": "git"
   },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "typescript": ">=4.8.4"
+  },
   "release": {
     "branches": [
       "master"
@@ -23,11 +27,13 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "dev": "vite",
-    "build": "TODO: implementar",
+    "build": "yarn clean && tsc && yarn copyfiles",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=f3aab302ead8"
+    "chromatic": "npx chromatic --project-token=f3aab302ead8",
+    "clean": "rimraf dist/",
+    "copyfiles": "copyfiles -u 1 src/**/*.css dist/"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -47,6 +53,8 @@
     "@vitejs/plugin-react": "^2.2.0",
     "babel-loader": "^8.2.5",
     "chromatic": "^6.11.3",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
     "typescript": "^4.6.4",
     "vite": "^3.2.0"
   },

@@ -8,7 +8,7 @@
   "main": "dist/main.js",
   "homepage": "",
   "repository": {
-    "url": "https://alexandermartinez25.github.io/my-storybook/",
+    "url": "https://github.com/AlexanderMartinez25/my-storybook",
     "type": "git"
   },
   "peerDependencies": {
